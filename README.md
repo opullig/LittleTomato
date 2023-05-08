@@ -1,2 +1,2 @@
-# DeliveryExpress
-Aplicativo de Delivery para pequenos comércios
+# Little Tomato
+Delivery App for small business
