@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, RefreshControl, View, AsyncStorage, LogBox } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, RefreshControl, View, LogBox } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import SearchBar from '../../components/Bars/SearchBar';
 import BarNavigation from '../../components/Bars/BarNavigation';

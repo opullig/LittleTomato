@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { Text, ToastAndroid, View, StyleSheet, TouchableOpacity, AsyncStorage, LogBox, ScrollView, KeyboardAvoidingView} from 'react-native';
+import { Text, ToastAndroid, View, StyleSheet, TouchableOpacity, LogBox, ScrollView, KeyboardAvoidingView} from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Input from '../../components/Form/Inputs';

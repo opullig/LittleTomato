@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { Text, View, Image, StyleSheet, KeyboardAvoidingView, TouchableOpacity, StatusBar, AsyncStorage, ToastAndroid, LogBox } from 'react-native';
-
+import { Text, View, Image, StyleSheet, KeyboardAvoidingView, TouchableOpacity, StatusBar, ToastAndroid, LogBox } from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import api from '../../services/api';
 
 import Logo from '../../assets/logo.png';

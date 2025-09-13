@@ -1,11 +1,9 @@
-import React from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import BackArrow from '../../assets/backArrow.png'
 
 
 function DefaultBar({ title, onPress, back }){
-   
 
     return(
         <View style={styles.bar}>
@@ -42,4 +40,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default withNavigation(DefaultBar);
+export default useNavigation(DefaultBar);

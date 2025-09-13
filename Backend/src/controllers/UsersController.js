@@ -54,32 +54,33 @@ module.exports={
     async update(req, res){
         const { id } = req.params
         let { name, email, password} = req.body;
-
-        if(password && !name){
-            verify.params([id, password],res)
-
-            password = sanitize.password(password);
-            password = md5(password);
-
-            try{
-                await connection(TABLE_PASSWORDS).where({user: id}).update({ password })
-                message.updateSuccess(res);
-            }catch(e){message.serverError(e,res)}
-
-        }else if(name && !password){
-            verify.params([id, name, email])
-
-            name = sanitize.text(name);
-            email = sanitize.text(email);
-
-            try{
-                await connection(TABLE_USERS).where({id}).update({ name, email })
-                message.updateSuccess(res);
-            }catch(e){message.serverError(e,res)}
+            console.log(req.body)
         
-        }else{
-            message.badRequest(res);
-        }    
+        // if(password && !name){
+            // verify.params([id, password],res)
+
+        //     password = sanitize.password(password);
+        //     password = md5(password);
+
+        //     try{
+        //         await connection(TABLE_PASSWORDS).where({user: id}).update({ password })
+        //         message.updateSuccess(res);
+        //     }catch(e){message.serverError(e,res)}
+
+        // }else if(name && !password){
+        //     verify.params([id, name, email])
+
+        //     name = sanitize.text(name);
+        //     email = sanitize.text(email);
+
+        //     try{
+        //         await connection(TABLE_USERS).where({id}).update({ name, email })
+        //         message.updateSuccess(res);
+        //     }catch(e){message.serverError(e,res)}
+        
+        // }else{
+        //     message.badRequest(res);
+        // }    
     },
 
     async toggle(req,res){toggle(req,res,TABLE_USERS)},

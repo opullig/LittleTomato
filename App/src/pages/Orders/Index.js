@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { AsyncStorage, LogBox, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { LogBox, ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import BarNavigation from '../../components/Bars/BarNavigation';

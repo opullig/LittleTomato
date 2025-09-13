@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { View, TouchableOpacity, Image, Text, StyleSheet, AsyncStorage} from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
+import { useNavigation } from '@react-navigation/native';
+
 
 import MarketIcon from '../../assets/market.png';
 import CartIcon from '../../assets/cart.png';
@@ -91,4 +93,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default withNavigation(BarNavigation);
+export default useNavigation(BarNavigation);

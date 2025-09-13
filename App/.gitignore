@@ -102,3 +102,19 @@ dist
 
 # TernJS port file
 .tern-port
+
+node_modules/
+.expo/
+.expo-shared/
+
+# Build e caches
+android/
+ios/
+web-build/
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
+.idea/

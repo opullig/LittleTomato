@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { AsyncStorage, Text, StyleSheet, View, LogBox, Image } from 'react-native'
+import { Text, StyleSheet, View, LogBox, Image } from 'react-native'
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 import NumericInput from 'react-native-numeric-input';
 
 import DefaultBar from '../../components/Bars/DefaultBar';

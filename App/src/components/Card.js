@@ -1,6 +1,5 @@
-import React from 'react';
 import { View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 
 import FoodIcon from '../assets/food.png';
 import DrinkIcon from '../assets/Drink.png';
@@ -147,4 +146,4 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
     },
 });
-export default withNavigation(Card);
+export default useNavigation(Card);

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { AsyncStorage, Text, View, StyleSheet, Image, ToastAndroid, LogBox} from 'react-native';
+import { Text, View, StyleSheet, Image, ToastAndroid, LogBox} from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Button from '../../components/Form/Button';

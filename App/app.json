@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Expresso Dennys",
+    "name": "ExpressDelivery",
     "slug": "App",
     "version": "1.6.0",
     "orientation": "portrait",
@@ -24,7 +24,12 @@
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "package": "com.br.expressodennys"
-    }
+      "package": "com.br.expressDelivery"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-web-browser",
+      "expo-router"
+    ]
   }
 }

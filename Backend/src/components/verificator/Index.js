@@ -3,10 +3,11 @@ const connection = require('../../database/connection');
 
 
 function exists(params = [], response){
-    params.map(item => {
-        if(item == null || item == 'undefined')
-            return response.status(400).json({message: `Parâmetro Inexistente`})
-    });
+    console.log(params)
+    // params.map(item => {
+    //     if(item == null || item == 'undefined')
+    //         return response.status(400).json({message: `Parâmetro Inexistente`})
+    // });
 }
 
 function hasValue(params = [], response){

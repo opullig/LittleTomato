@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import { AsyncStorage, ScrollView, StyleSheet, Text, View, TouchableOpacity, RefreshControl, Picker, LogBox } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, TouchableOpacity, RefreshControl, Picker, LogBox } from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import api from '../../services/api';
 import BarNavigation from '../../components/Bars/BarNavigation';
@@ -149,19 +150,20 @@ function Cart({ navigation }){
             </ScrollView>
             <View style={styles.viewPayment}>
                 <Text style={styles.label}>Pagamento</Text>
-                <Picker selectedValue={payments} onValueChange={(data) => setPayments(data)} >
+                {/* <Picker selectedValue={payments} onValueChange={(data) => setPayments(data)} >
                     <Picker.Item label='Dinheiro' value='dinheiro'/>
                     <Picker.Item label='Débito' value='cartão de débito'/>
                     <Picker.Item label='Crédito' value='cartão de crédito'/>
                 </Picker>
-            </View>
+            */}
+            </View> 
             <View style={styles.viewPayment}>
                 <Text style={styles.label}>Local de Entrega</Text>
-                <Picker selectedValue={location} onValueChange={(data) => setLocation(data)}  >
+                {/* <Picker selectedValue={location} onValueChange={(data) => setLocation(data)}  >
                     {locations.length == 0 ? <Picker.Item label='Sem Locais Cadastrados'/> : locations.map((item, index) => {
                     return (<Picker.Item label={`${item.address} ${item.complement}`} value={`${item.address} ${item.complement}`} key={index} />);
                     })}
-                </Picker>
+                </Picker> */}
             </View>
             <View style={styles.viewButton}>
             {products.length != 0 && location != '' ? <Button onpress={closeOrder} text='Fechar Pedido'/> : <Text></Text>}

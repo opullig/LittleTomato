@@ -1,6 +1,6 @@
-import { Filter } from '@material-ui/icons';
 import React, {useState,useEffect} from 'react';
-import {View, Text, AsyncStorage, StyleSheet, LogBox } from 'react-native';
+import {View, Text, StyleSheet, LogBox } from 'react-native';
+import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Button from '../../components/Form/Button';
