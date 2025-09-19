@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, RefreshControl, View, LogBox } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import SearchBar from '../../components/Bars/SearchBar';
@@ -104,11 +103,9 @@ export default function Index({ navigation }){
             <SearchBar onChangeText={setFilter} value={filter} />
             <View style={styles.filterView}>
                 <View style={styles.filterOption}>
-                    <CheckBox value={isOpened} onValueChange={data => setIsOpened(data)} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/>
                     <Text style={styles.filterLabel}>Em Aberto</Text>
                 </View>
                 <View style={styles.filterOption}>
-                    <CheckBox value={isClosed} onValueChange={data => setIsClosed(data)} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/>
                     <Text style={styles.filterLabel}>Fechados</Text>
                 </View>
             </View>

@@ -4,7 +4,6 @@ import { LogBox, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 're
 import DefaultBar from '../../components/Bars/DefaultBar';
 import BarNavigation from '../../components/Bars/BarNavigation';
 import api from '../../services/api';
-import { Picker } from '@react-native-community/picker';
 
 export default function ProfessionalOrders({navigation}){
     LogBox.ignoreAllLogs(true);

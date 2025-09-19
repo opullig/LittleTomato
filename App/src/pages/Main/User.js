@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useCallback} from 'react'
 import { StyleSheet, StatusBar, Text, ScrollView, RefreshControl, View, LogBox } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+
 
 import api from '../../services/api';
 
@@ -126,18 +126,6 @@ export default function Main({navigation}){
     return(
         <>
         <SearchBar onChangeText={setFilter} value={filter}/>
-        <View style={styles.containerFilter}>
-            {/* <CheckBox value={isSelected} onValueChange={data => setIsSelected(data)} disabled={false} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/> */}
-            <Text style={styles.filterText}>Apenas Promoções</Text>
-        </View>
-        <View style={styles.containerFilter}>
-            {/* <CheckBox value={isGrocery} onValueChange={data => setIsGrocery(data)} disabled={false} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/>
-            <Text style={styles.filterText}>Mercearia</Text>
-            <CheckBox value={isHFruti} onValueChange={data => setIsHFruti(data)} disabled={false} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/>
-            <Text style={styles.filterText}>Horti-Fruti</Text>
-            <CheckBox value={isDrink} onValueChange={data => setIsDrink(data)} disabled={false} tintColors={{true: '#f0f0f0', false: '#f0f0f0'}}/> */}
-            <Text style={styles.filterText}>Bebidas</Text>
-        </View>   
             
         <ScrollView style={styles.container} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}> 
             {products.length != 0 ? products.map(product => {
