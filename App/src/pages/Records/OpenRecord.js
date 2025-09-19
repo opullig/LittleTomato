@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Text, TextInput, StyleSheet, View, TouchableOpacity, ToastAndroid, Image, LogBox } from 'react-native';
+import { ScrollView, Text, TextInput, StyleSheet, View, TouchableOpacity, ToastAndroid, LogBox } from 'react-native';
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Button from '../../components/Form/Button';
 import api from '../../services/api';
 
-import BillIcon from '../../assets/bill.png';
-import MarketIcon from '../../assets/MarketIcon.png'
 
 export default function OpenRecord({ navigation }){
     LogBox.ignoreAllLogs(true);
@@ -137,7 +135,6 @@ export default function OpenRecord({ navigation }){
                     <View style={styles.viewDefault}>
                         <TextInput value={filter} onChangeText={setFilter} placeholder='Procurar Item' />
                         <View style={styles.viewTitle}>
-                            <Image source={BillIcon} style={styles.icon}/>
                             <Text style={styles.title}>Produtos</Text>
                         </View>
                         <ScrollView >
@@ -159,7 +156,6 @@ export default function OpenRecord({ navigation }){
                 }
                 <View style={styles.viewDefault}>
                     <View style={styles.viewTitle}>
-                        <Image source={MarketIcon} style={styles.icon}/>
                         <Text style={styles.title}>Itens na Nota</Text>
                     </View>
                     <ScrollView>

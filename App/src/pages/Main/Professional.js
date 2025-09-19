@@ -1,11 +1,10 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import {Text, StatusBar, ScrollView, TouchableOpacity, Image, StyleSheet, RefreshControl, LogBox} from 'react-native';
+import {Text, StatusBar, ScrollView, TouchableOpacity, StyleSheet, RefreshControl, LogBox} from 'react-native';
 
 import SearchBar from '../../components/Bars/SearchBar';
 import BarNavigation from '../../components/Bars/BarNavigation';
 import Card from '../../components/Card';
 
-import plus from '../../assets/plus.png';
 import api from '../../services/api';
 
 const wait = (timeout) => {
@@ -50,7 +49,7 @@ function Professional({ navigation }){
             <SearchBar value={filter}  onChangeText={setFilter}/>
             <ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} style={styles.container}>
                 <TouchableOpacity style={styles.viewButton} onPress={addProducts}>
-                    <Image source={plus} style={styles.icon}/>
+                
                     <Text style={styles.textButton}>Adicionar Produto</Text>
                 </TouchableOpacity>
                 {products.length == 0 ? <Text>Sem Items Cadastrados</Text> : products.map((product, index) => {

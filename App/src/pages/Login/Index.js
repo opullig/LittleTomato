@@ -3,7 +3,6 @@ import { Text, View, Image, StyleSheet, KeyboardAvoidingView, TouchableOpacity, 
 import  AsyncStorage  from '@react-native-async-storage/async-storage';
 import api from '../../services/api';
 
-import Logo from '../../assets/logo.png';
 import Input from '../../components/Form/Inputs';
 import Button from '../../components/Form/Button';
 
@@ -64,7 +63,6 @@ export default function Login({ navigation }){
 
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <Image source={Logo} style={styles.logo}/>
             <View style={styles.form}>
                 <Input name='Login' placeholder='E-mail' onChangeText={setEmail} value={email}/>
                 <Input name='Password' placeholder='Senha' onChangeText={setPassword} value={password} security={true}/>

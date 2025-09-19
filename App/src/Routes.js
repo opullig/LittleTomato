@@ -25,7 +25,7 @@ import OpenRecord from './pages/Records/OpenRecord';
 import RecordItem from './pages/Records/RecordItem';
 import Sales from './pages/Options/Sales';
 
-const Stack = createNativeStackNavigator
+const Stack = createNativeStackNavigator();
 
 export default function Routes() {
     return (

@@ -1,12 +1,15 @@
-import { View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import FoodIcon from '../assets/food.png';
-import DrinkIcon from '../assets/Drink.png';
-import FruitIcon from '../assets/Fruit.png';
 
-function Card({ name, description, price, select, id, priceOff, status = '', amount, category, showAmount=false }){
-    
+function Card({ 
+    name, description, price, 
+    select, id, priceOff, 
+    status = '', amount, category, 
+    showAmount=false, targetScreen 
+}){
+    const navigation = useNavigation();
+
     let slicedPrice = 0
     
     function chooseItem(){
@@ -29,9 +32,6 @@ function Card({ name, description, price, select, id, priceOff, status = '', amo
         slicedPrice = price - (price * priceOff); 
     return (
         <TouchableOpacity onPress={chooseItem} style={status ? styles.cardItemActivated : styles.cardItemDeactivated}>
-            <View style={styles.cardBackImage}>
-                <Image source={category.match('Mercearia') ? FoodIcon : category.match('Bebida') ? DrinkIcon : FruitIcon} style={styles.cardImage}/>
-            </View>
             <View style={styles.cardBackText}>
                 <Text style={styles.cardTitle}>{name.length > 20 ? name.substring(0,20)+"..." : name}</Text>
                 <Text style={styles.cardDesc}>{description.length > 50 ? description.substring(0,50)+"..." : description}</Text>
@@ -146,4 +146,4 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
     },
 });
-export default useNavigation(Card);
+export default Card;

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import { KeyboardAvoidingView, Image, StyleSheet, ToastAndroid, View, StatusBar, LogBox, ScrollView } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, ToastAndroid, View, StatusBar, LogBox, ScrollView } from 'react-native'
 
-import Logo from '../../assets/logo.png'
 
 import Inputs from '../../components/Form/Inputs';
 import Button from '../../components/Form/Button';
@@ -44,7 +43,6 @@ export default function NewUser({ navigation}){
         <KeyboardAvoidingView >
         <View style={styles.container}>
 
-                <Image source={Logo} style={styles.logo}/>
                 <Inputs name='name' placeholder='Nome' onChangeText={setName} value={name} />
                 <Inputs name='email' placeholder='E-mail' onChangeText={setEmail} value={email}/>
                 <Inputs name='password' placeholder='Senha' onChangeText={setPassword} value={password} security={true}/>

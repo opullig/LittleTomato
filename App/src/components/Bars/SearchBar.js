@@ -1,8 +1,5 @@
-import React from 'react';
-import { View, TextInput, Image, StyleSheet, StatusBar } from 'react-native';
+import { View, TextInput, StyleSheet, StatusBar } from 'react-native';
 
-
-import SearchIcon from '../../assets/search.png';
 
 function SearchBar({onChangeText, value}){
     return(
@@ -10,7 +7,6 @@ function SearchBar({onChangeText, value}){
         <View style={styles.containerTop}>
             <View style={styles.searchInput}>
                 <TextInput style={styles.input} onChangeText={onChangeText} value={value}/>
-                <Image source={SearchIcon} style={styles.icon} />
             </View>
         </View>
         </> 

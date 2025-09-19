@@ -1,13 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import { Text, StyleSheet, View, LogBox, Image } from 'react-native'
+import { Text, StyleSheet, View, LogBox } from 'react-native'
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 import NumericInput from 'react-native-numeric-input';
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Buttom from '../../components/Form/Button';
-import FoodIcon from '../../assets/food.png';
-import DrinkIcon from '../../assets/Drink.png';
-import FruitIcon from '../../assets/Fruit.png';
 
 function ConfirmItem({ navigation }){
     LogBox.ignoreAllLogs(true);
@@ -69,9 +66,7 @@ function ConfirmItem({ navigation }){
             <DefaultBar title={item.name} onPress={back} back={true} />
             <View style={style.content}>
                 <View style={style.viewBanner}>
-                {item.category ? 
-                    <Image source={ item.category.match('Mercearia') ? FoodIcon : item.category.match('Bebida') ? DrinkIcon : FruitIcon } style={style.cardImage}/>
-                : <></>}
+                    <Text style={{fontSize:18, color:'#FFF', fontWeight:'bold'}}>Confirme a quantidade</Text>
                 </View>
                 <Text style={style.textDescription}>{item.description}</Text>
                 <Text style={style.priceText}>R$ {item.price ? item.price.replace('.',',') : <></>}</Text>

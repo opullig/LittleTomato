@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { Text, View, StyleSheet, Image, ToastAndroid, LogBox} from 'react-native';
+import { Text, View, StyleSheet, ToastAndroid, LogBox} from 'react-native';
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import Button from '../../components/Form/Button';
-
-import Market from '../../assets/MarketIcon.png';
 
 import api from '../../services/api';
 
@@ -82,7 +80,6 @@ function CloseOrder({ navigation }){
                 <Text style={styles.labelText}>Local de Entrega:</Text> 
                 <Text style={styles.dataText}>{location}</Text>
                 <View style={styles.heading}>
-                    <Image source={Market} style={styles.icon}/>
                     <Text style={styles.headingText}>Produtos</Text>
                 </View>
                 <View style={styles.productList}>

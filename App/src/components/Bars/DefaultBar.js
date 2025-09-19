@@ -1,15 +1,18 @@
-import { StatusBar, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import BackArrow from '../../assets/backArrow.png'
-
 
 function DefaultBar({ title, onPress, back }){
+    
+    const navigation = useNavigation();
 
+    if(onPress == null){
+        onPress = () => navigation.goBack();
+    }
     return(
         <View style={styles.bar}>
         {back == true ? 
         <TouchableOpacity onPress={onPress}>
-            <Image source={BackArrow} style={styles.arrow}/>
+            <Text style={styles.arrow}>{"<"}</Text>
         </TouchableOpacity> : <></>
         }
             <Text style={styles.title}> {title} </Text>
@@ -40,4 +43,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default useNavigation(DefaultBar);
+export default DefaultBar;

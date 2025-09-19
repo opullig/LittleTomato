@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView, LogBox } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,ScrollView, LogBox } from 'react-native';
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
 import BarNavigation from '../../components/Bars/BarNavigation';
@@ -7,10 +7,6 @@ import DefaultBar from '../../components/Bars/DefaultBar';
 import Button from '../../components/Form/Button';
 import api from '../../services/api';
 
-import accUser from '../../assets/user.png';
-import plus from '../../assets/plus.png';
-import pin from '../../assets/pin.png';
-import bill from '../../assets/bill.png';
 
 
 function Options({ navigation }){
@@ -110,7 +106,6 @@ function Options({ navigation }){
             <ScrollView style={styles.container}>
                 <View style={styles.view}>
                     <TouchableOpacity style={styles.touch} onPress={() => goTo('Account')}>
-                        <Image source={accUser} style={styles.icon} />
                         <Text style={styles.text}>Conta</Text>
                     </TouchableOpacity>
                 </View>
@@ -122,19 +117,16 @@ function Options({ navigation }){
                             
                             return(
                                 <TouchableOpacity style={styles.touch} key={index} onPress={() => goLocation(location)}>
-                                    <Image source={pin} style={styles.icon} />
                                     <Text style={styles.text} >{location.address}</Text>
                                 </TouchableOpacity>
                             )
                             }):<Text></Text>}
                             <TouchableOpacity style={styles.touch} onPress={() => goLocation()}>
-                                <Image source={plus} style={styles.icon} />
                                 <Text style={styles.text}>Adicionar Local de Entrega</Text>
                             </TouchableOpacity>
                     </View>
                     <View style={styles.view}>
                         <TouchableOpacity style={styles.touch} onPress={() => goTo('Orders')}>
-                            <Image source={bill} style={styles.icon} />
                             <Text style={styles.title}>Pedidos</Text>
                         </TouchableOpacity>
                         <ScrollView style={styles.viewOrders}>
@@ -156,11 +148,9 @@ function Options({ navigation }){
                 : 
                 <View>
                     <TouchableOpacity style={styles.touch} onPress={() => navigation.navigate('AddProfessional')}>
-                        <Image source={accUser} style={styles.icon} />
                         <Text style={styles.text}>Cadastrar Profissional</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.touch} onPress={() => navigation.navigate('Sales')}>
-                        <Image source={bill} style={styles.icon} />
                         <Text style={styles.text}>Vendas</Text>
                     </TouchableOpacity>
                 </View>

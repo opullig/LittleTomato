@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import { View, StyleSheet, ScrollView, TextInput, Text, Image, LogBox } from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Text, LogBox } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import DefaultBar from '../../components/Bars/DefaultBar';
 import api from '../../services/api';
 
-import SearchIcon from '../../assets/search.png';
 
 export default function Sales({navigation}){
     LogBox.ignoreAllLogs(true);
@@ -68,7 +67,6 @@ export default function Sales({navigation}){
                 <TextInput style={styles.input} onChangeText={setDataFilter} value={dataFilter} placeholder={'Pesquise por data (AAAA-MM-DD)'} keyboardType='decimal-pad' />
                 {dataFilter.length >= 7 ?
                 <TouchableOpacity style={styles.button} onPress={getSales}>
-                    <Image source={SearchIcon} style={styles.icon} />
                     <Text style={styles.btnText}>Pesquisar</Text>
                 </TouchableOpacity>
                 :<></>

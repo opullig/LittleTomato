@@ -1,13 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 import { useNavigation } from '@react-navigation/native';
 
-
-import MarketIcon from '../../assets/market.png';
-import CartIcon from '../../assets/cart.png';
-import SetupIcon from '../../assets/setup.png';
-import OrderIcon from '../../assets/billIcon.png';
 
 
 function BarNavigation({ navigation }){
@@ -28,15 +23,12 @@ function BarNavigation({ navigation }){
         return (
             <View style={styles.containerBottom}>
             <TouchableOpacity onPress={() => toPage('MainUser')} style={styles.buttonBottom} >
-                <Image source={MarketIcon} style={styles.iconBottom}/>
                 <Text style={styles.textBottom}>Produtos</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => toPage('Cart')} style={styles.buttonBottom} >
-                <Image source={CartIcon} style={styles.iconBottom}/>
                 <Text style={styles.textBottom}>Carrinho</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => toPage('Options')} style={styles.buttonBottom} >
-                <Image source={SetupIcon} style={styles.iconBottom}/>
                 <Text style={styles.textBottom}>Opções</Text>
             </TouchableOpacity>
         </View>
@@ -45,19 +37,15 @@ function BarNavigation({ navigation }){
         return (
             <View style={styles.containerBottom}>
                 <TouchableOpacity style={styles.buttonBottom} onPress={() => toPage('MainProfessional')}>
-                    <Image source={MarketIcon} style={styles.iconBottom} />
                     <Text style={styles.textBottom}>Produtos</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonBottom} onPress={() => toPage('ProfessionalOrders')}>
-                    <Image source={CartIcon} style={styles.iconBottom} />
                     <Text style={styles.textBottom}>Pedidos</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonBottom} onPress={() => toPage('Records')}>
-                    <Image source={OrderIcon} style={styles.iconBottom} />
                     <Text style={styles.textBottom}>Notas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonBottom} onPress={() => toPage('Options')}>
-                    <Image source={SetupIcon} style={styles.iconBottom} />
                     <Text style={styles.textBottom}>Opções</Text>
                 </TouchableOpacity>
             </View>
@@ -93,4 +81,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default useNavigation(BarNavigation);
+export default BarNavigation;

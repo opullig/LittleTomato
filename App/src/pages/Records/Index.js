@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, RefreshControl, View, LogBox } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, RefreshControl, View, LogBox } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import  AsyncStorage  from '@react-native-async-storage/async-storage'
 
@@ -8,7 +8,6 @@ import BarNavigation from '../../components/Bars/BarNavigation';
 import Button from '../../components/Form/Button';
 import Modal from '../../components/Modal/ViewModal';
 
-import Plus from '../../assets/plus.png';
 import api from '../../services/api';
 
 const wait = (timeout) => {
@@ -121,7 +120,6 @@ export default function Index({ navigation }){
                     </View>
                 </Modal>
                 <TouchableOpacity onPress={() => setModalVisible(true)} style={styles.buttonView}>
-                    <Image source={Plus} style={styles.icon} />
                     <Text style={styles.buttonText}>Criar Nova Nota</Text>
                 </TouchableOpacity>
                 {records.length == 0 ? <Text>Sem Cadastro</Text> : records.map((record, index) => {
